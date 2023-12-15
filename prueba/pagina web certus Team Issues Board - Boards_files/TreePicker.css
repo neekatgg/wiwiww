@@ -1,0 +1,56 @@
+.treepicker-item {
+  display: -webkit-box;
+  -webkit-flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-box-flex: 1 1 0%;
+  -webkit-flex: 1 1 0%;
+  flex: 1 1 0%;
+  /* Chrome fix - Chrome incorrectly sets a min-height/width it will not go lower than
+     * See: https://github.com/philipwalton/flexbugs#1-minimum-content-sizing-of-flex-items-not-honored
+     * CodePen with bug: https://codepen.io/philipwalton/pen/MYbrrr
+     * CodePen with min-width: https://codepen.io/anon/pen/VrKGWa
+     */
+  min-height: 0;
+  min-width: 0;
+  align-items: center;
+  align-self: flex-start;
+  min-width: 0px;
+  height: 100%;
+  line-height: 2.5em;
+}
+
+.treepicker-item .treepicker-item-title {
+  flex: 1 0 60%;
+  text-align: left;
+  min-width: 0px;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.treepicker-item .treepicker-item-title .treepicker-item-title-tooltip {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.treepicker-item .treepicker-item-title .treepicker-item-title-input {
+  border: none;
+  background: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.treepicker-item .treepicker-item-date {
+  -webkit-box-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+}

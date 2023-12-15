@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras de Productos para el Hogar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .producto {
+            border: 1px solid #e1e1e1;
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+        }
+
+        .producto h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .producto img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .producto p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .producto button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .producto button:hover {
+            background-color: #2980b9;
+        }
+
+        .carrito {
+            background-color: #e44d26;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .carrito:hover {
+            background-color: #d44023;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Productos para el Hogar</h1>
+    </header>
+
+    <section>
+        <div class="producto" id="producto1">
+            <img src="imagen_producto1.jpg" alt="Producto 1">
+            <h2>Producto 1</h2>
+            <p>Características: Descripción del producto 1.</p>
+            <p>Precio: $50.00</p>
+            <button onclick="agregarAlCarrito('Producto 1', 50.00)">Agregar al Carrito</button>
+        </div>
+
+        <!-- Repite este bloque para más productos -->
+        
+        <div class="producto" id="producto2">
+            <img src="imagen_producto2.jpg" alt="Producto 2">
+            <h2>Producto 2</h2>
+            <p>Características: Descripción del producto 2.</p>
+            <p>Precio: $75.00</p>
+            <button onclick="agregarAlCarrito('Producto 2', 75.00)">Agregar al Carrito</button>
+        </div>
+
+        <!-- Agrega más productos según sea necesario -->
+        
+        <!-- Producto 3 -->
+        <div class="producto" id="producto3">
+            <img src="imagen_producto3.jpg" alt="Producto 3">
+            <h2>Producto 3</h2>
+            <p>Características: Descripción del producto 3.</p>
+            <p>Precio: $100.00</p>
+            <button onclick="agregarAlCarrito('Producto 3', 100.00)">Agregar al Carrito</button>
+        </div>
+
+        <!-- Continúa añadiendo más productos... -->
+
+    </section>
+
+    <div class="carrito" onclick="verCarrito()">Ver Carrito</div>
+
+    <script>
+         // Función para agregar productos al carrito (simulada)
+         function agregarAlCarrito(nombreProducto, precio) {
+            // Aquí puedes implementar la lógica para agregar productos al carrito
+            alert(`¡${nombreProducto} agregado al carrito! Precio: $${precio}`);
+        }
+
+        // Función para mostrar el carrito (simulada)
+        function verCarrito() {
+            // Aquí puedes implementar la lógica para mostrar el contenido del carrito
+            alert('Mostrar carrito');
+        }
+    </script>
+
+</body>
+</html>

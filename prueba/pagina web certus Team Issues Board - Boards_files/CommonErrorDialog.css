@@ -1,0 +1,14 @@
+.wit-common-error-dialog .dialog-content {
+  padding-left: 10px;
+}
+
+.wit-common-error-dialog .dialog-content .bowtie-status-error {
+  font-size: 32px;
+  line-height: normal;
+  padding-right: 10px;
+}
+
+.wit-common-error-dialog .dialog-content .dialog-message {
+  font-size: 13px;
+  line-height: normal;
+}

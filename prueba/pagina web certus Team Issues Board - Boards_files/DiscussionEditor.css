@@ -1,0 +1,42 @@
+.discussion-editor-control.is-hidden {
+  display: none;
+}
+
+.discussion-editor-control .discussion-messages-left {
+  margin-top: 4px;
+}
+
+.discussion-editor-control .discussion-messages-left .identity-picture {
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+}
+
+.discussion-editor-control .html-editor {
+  display: flex;
+  flex-direction: column;
+}
+
+.discussion-editor-control .html-editor .rooster-wrapper {
+  border-radius: 5px;
+}
+
+.discussion-editor-control .html-editor .rooster-wrapper .rooster-editor {
+  padding: 4px 7px;
+}
+
+.discussion-editor-control .html-editor.auto-grow .rooster-wrapper {
+  min-height: 90px;
+}
+
+.discussion-editor-control .html-editor.auto-grow .rooster-wrapper .rooster-editor {
+  min-height: 50px;
+}
+
+.discussion-editor-control .html-editor.auto-grow .rooster-wrapper.is-focused {
+  min-height: 90px;
+}
+
+.discussion-editor-control .html-editor.auto-grow .rooster-wrapper.is-focused .rooster-editor {
+  min-height: 50px;
+}

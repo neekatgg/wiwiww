@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innova_Home</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="rrr.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="cool.gif" alt="imagen" class="imagen">
+            <a href="file:///C:/Users/najar/OneDrive/Documentos/franco/CSS/index.html">
+                <button class="pruebagoogle">
+                    <img src="pipipi.avif" alt="Google" width="15">
+                    <span>Iniciar sesión</span>
+                </button></a>
+        </div>
+    </div>
+    <style>
+        /* Estilos adicionales para el botón */
+        #toggleMusic {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            font-size: 16px;
+            padding: 8px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    
+    <button id="toggleMusic">🎵 Reproducir Música</button>
+
+    
+    <script>
+        var audio = new Audio('ruta-de-tu-archivo-de-musica.mp3'); 
+
+        var isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                audio.pause();
+                document.getElementById('toggleMusic').innerHTML = '🎵 Reproducir Música';
+            } else {
+                audio.play();
+                document.getElementById('toggleMusic').innerHTML = '🔇 Pausar Música';
+            }
+            isPlaying = !isPlaying;
+        }
+
+        // Asignar la función al clic del botón
+        document.getElementById('toggleMusic').addEventListener('click', toggleMusic);
+    </script>
+
+</body>
+</html>
+    <section class="hero">
+        <style>
+           
+.hero {
+    position: relative;
+    height: 300px;
+    background-color: transparent; /* Cambiado a transparente para que el fondo blanco de .hero .gif-overlay se vea */
+}
+
+.hero .gif-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('ramo.gif');
+    background-repeat: repeat; /* Repetir tanto horizontal como verticalmente */
+    background-size: contain;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 35px;
+    color: black;
+}
+
+        </style>
+        <body>
+            <h1>Bienvenidos a Certus</h1>
+            <div class="gif-overlay"></div>
+        </body>
+    </section>
+
+    <header>
+        <div id="logo">
+            <a href="index.html">
+                <img src="image-removebg-preview.png" alt="Logo de la empresa">
+            </a>
+        </div>
+        <div id="menu">
+            <a href="file:///C:/Users/najar/OneDrive/Documentos/franco/imaginacion.html" class="navigation-button">
+                <span>Productos</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="seccion">
+        <div class="calabaza-left">
+            <img src="black-cat-24.gif" alt="Calabaza Izquierda">
+        </div>
+        <div class="columna1">
+            <div>
+                <img src="twt8.gif" alt="Accesorios para el Hogar">
+            </div>
+        </div>
+        <div class="calabaza-right">
+            <img src="black-cat-24.gif" alt="Calabaza Derecha">
+        </div>
+    </section>
+
+    <section class="seccion">
+        <div class="columna2">
+            <h2>Accesorios para el Hogar</h2>
+            <p>Bienvenido a nuestra página web, donde encontrarás una amplia selección de accesorios para hacer de tu hogar un lugar más cómodo y acogedor. Ofrecemos una variedad de productos que incluyen decoración, utensilios de cocina, muebles y mucho más.</p>
+            <p>Explora nuestros servicios y descubre cómo podemos ayudarte a mejorar tu hogar.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Esto y mucho más en innova_home</h2>
+        <div class="galeria">
+            <img src="twt2.avif" alt="Imagen 1" class="imagen-galeria">
+            <img src="twt3.webp" alt="Imagen 2" class="imagen-galeria">
+            <img src="twt4.jpg" alt="Imagen 3" class="imagen-galeria">
+            <img src="twt5.jpg" alt="Imagen 4" class="imagen-galeria">
+            <img src="twt6.webp" alt="Imagen 5" class="imagen-galeria">
+            <img src="twt10.webp" alt="Imagen 6" class="imagen-galeria">
+        </div>
+    </section>
+
+    <footer class="footer-container">
+        <div class="columna">
+            <img src="image-removebg-preview.png" alt="Logo de la empresa">
+        </div>
+        <div class="columna">
+            <h3>Contactanos</h3>
+            <a href="file:///C:/Users/najar/OneDrive/Documentos/franco/michael.html" class="navigation-button">
+                <span>ingrese</span> 🐱‍👓
+            </a>
+        </div>
+        <div class="columna">
+            <h3>terminos y condiciones</h3>
+            <a href="file:///C:/Users/najar/OneDrive/Documentos/franco/jhon.html" class="navigation-button">
+                <span>click aquí</span> 🐱‍👓
+            </a>
+        </div>
+        <div class="columna">
+            <h3>Historia</h3>
+            <a href="file:///C:/Users/najar/OneDrive/Documentos/franco/vicente.html" class="navigation-button">
+                <span>bam bam</span> 🐱‍👓
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

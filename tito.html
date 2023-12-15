@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+
+  <div>
+    <h3>Objeto Producto:</h3>
+    <ul id="productoInfo"></ul>
+    <script>
+      var producto = {
+        codigo: "A23F01",
+        nombre: "Televisor",
+        precio: 2499.99,
+        colores: ["negro", "plata"],
+        calcularIgv: function() {
+          return this.precio * 0.19;
+        }
+      };
+
+      var productoInfo = document.getElementById("productoInfo");
+
+      for (const propiedad in producto) {
+        if (producto.hasOwnProperty(propiedad)) {
+          const elemento = producto[propiedad];
+          var listItem = document.createElement("li");
+          listItem.innerHTML = `<strong>${propiedad}:</strong> ${elemento}`;
+          productoInfo.appendChild(listItem);
+        }
+      }
+    </script>
+  </div>
+
+  <br>
+
+  <div>
+    <h3>Respuesta de la operación (Calcular IGV):</h3>
+    <button onclick="calcularIgv()">Calcular IGV</button>
+    <div id="resultadoOperacion"></div>
+
+    <script>
+      function calcularIgv() {
+        var resultado = producto.calcularIgv();
+        document.getElementById("resultadoOperacion").innerHTML = "Resultado de calcularIgv: " + resultado;
+      }
+    </script>
+  </div>
+
+  <br>
+
+  <div>
+    <h3>Sentencia de repetición (for):</h3>
+    <form onsubmit="ejecutarFor(); return false;">
+      <label for="iteracionesFor">Número de iteraciones:</label>
+      <input type="number" id="iteracionesFor" name="iteracionesFor" value="5">
+      <button type="submit">Ejecutar</button>
+    </form>
+
+    <div id="resultadoFor"></div>
+
+    <script>
+      function ejecutarFor() {
+        var iteraciones = document.getElementById("iteracionesFor").value;
+        var resultado = "";
+        for (let i = 0; i < iteraciones; i++) {
+          resultado += "Esta es una sentencia de repetición. Iteración: " + i + "<br>";
+        }
+        document.getElementById("resultadoFor").innerHTML = resultado;
+      }
+    </script>
+  </div>
+
+  <br>
+
+  <div>
+    <h3>Sentencia de repetición (while):</h3>
+    <script>
+      var indexWhile = 0;
+      var datosWhile = [20, 30, 40];
+      var resultadoWhile = "";
+
+      while (indexWhile < datosWhile.length) {
+        resultadoWhile += datosWhile[indexWhile] + "<br>";
+        indexWhile = indexWhile + 1;
+      }
+
+      document.write(resultadoWhile);
+    </script>
+  </div>
+
+  <br>
+
+  <div>
+    <h3>Sentencia de repetición (do-while):</h3>
+    <script>
+      var indiceDoWhile = 0;
+      var datosDoWhile = [20, 30, 40];
+      var resultadoDoWhile = "";
+
+      do {
+        resultadoDoWhile += datosDoWhile[indiceDoWhile] + "<br>";
+        indiceDoWhile = indiceDoWhile + 1;
+      } while (indiceDoWhile < datosDoWhile.length);
+
+      document.write(resultadoDoWhile);
+    </script>
+  </div>
+
+</body>
+
+</html>

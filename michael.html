@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atención al Cliente</title>
+    <link rel="shortcut icon" href="rrr.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #070707;
+        }
+
+        header {
+            background-image: url('productos1.avif');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        h2 {
+            color: #d1bebe;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #d3bcbc;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .contacto {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .contacto-info {
+            width: 30%;
+        }
+
+        .contacto-info h3 {
+            color: #d4c0c0;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .contacto-info p {
+            color: violet;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .contacto-info ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 10px;
+        }
+
+        .contacto-info ul li {
+            margin-bottom: 5px;
+        }
+
+        .formulario-contacto {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .formulario-contacto label {
+            width: 100%;
+            font-size: 16px;
+            color: #c29999;
+            margin-bottom: 5px;
+        }
+
+        .formulario-contacto input[type="text"],
+        .formulario-contacto input[type="email"],
+        .formulario-contacto textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .formulario-contacto textarea {
+            resize: vertical;
+        }
+
+        .formulario-contacto button {
+            background-color: violet;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Atención al Cliente</h1>
+    </header>
+
+    <section>
+        <h2>Información de Contacto</h2>
+        <div class="contacto">
+            <div class="contacto-info">
+                <h3>Teléfono</h3>
+                <p>+123456789</p>
+                <p>+987654321</p>
+            </div>
+            <div class="contacto-info">
+                <h3>Correo Electrónico</h3>
+                <p>contacto@empresa.com</p>
+                <p>soporte@empresa.com</p>
+                <p>ventas@empresa.com</p>
+            </div>
+            <div class="contacto-info">
+                <h3>Redes Sociales</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Formulario de Contacto</h2>
+        <form class="formulario-contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </section>
+
+</body>
+
+</html>
+
+

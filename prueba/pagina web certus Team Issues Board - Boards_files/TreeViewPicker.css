@@ -1,0 +1,198 @@
+.tree-picker-container .tree-picker-combo {
+  display: -webkit-box;
+  -webkit-flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  border:  1px solid;
+  border-color: rgba( 200, 200, 200 ,  1 );
+  border-color: rgba( var(--palette-neutral-20,200, 200, 200) ,  1 );
+}
+
+.tree-picker-container .tree-picker-combo:hover {
+  border-color: rgba( 0, 0, 0 ,  1 );
+  border-color: rgba( var(--palette-neutral-100,0, 0, 0) ,  1 );
+}
+
+.tree-picker-container .tree-picker-combo.tree-picker-combo--editing {
+  border-color: rgba(0, 120, 212, 1);
+  border-color: var(--communication-background,rgba(0, 120, 212, 1));
+}
+
+.tree-picker-container .tree-picker-combo.tree-picker-combo--error {
+  border-color: rgba( 168, 0, 0 ,  1 );
+  border-color: rgba( var(--palette-accent1-dark,168, 0, 0) ,  1 );
+}
+
+.tree-picker-container .tree-picker-combo.tree-picker-combo--disabled {
+  background-color: rgba( 218, 218, 218 ,  1 );
+  background-color: rgba( var(--palette-neutral-10,218, 218, 218) ,  1 );
+  pointer-events: none;
+}
+
+.tree-picker-container .tree-picker-combo .tree-picker-content {
+  display: -webkit-box;
+  -webkit-flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  -webkit-box-flex: 1 1 0%;
+  -webkit-flex: 1 1 0%;
+  flex: 1 1 0%;
+  /* Chrome fix - Chrome incorrectly sets a min-height/width it will not go lower than
+     * See: https://github.com/philipwalton/flexbugs#1-minimum-content-sizing-of-flex-items-not-honored
+     * CodePen with bug: https://codepen.io/philipwalton/pen/MYbrrr
+     * CodePen with min-width: https://codepen.io/anon/pen/VrKGWa
+     */
+  min-height: 0;
+  min-width: 0;
+  align-items: center;
+  padding: 0px 14px;
+  height: 34px;
+  cursor: text;
+  overflow: hidden;
+}
+
+.tree-picker-container .tree-picker-combo .tree-picker-content .tree-picker-selected-value {
+  flex: 1 1 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.tree-picker-container .tree-picker-combo .tree-picker-content .tree-picker-input {
+  -webkit-box-flex: 1 1 0%;
+  -webkit-flex: 1 1 0%;
+  flex: 1 1 0%;
+  /* Chrome fix - Chrome incorrectly sets a min-height/width it will not go lower than
+     * See: https://github.com/philipwalton/flexbugs#1-minimum-content-sizing-of-flex-items-not-honored
+     * CodePen with bug: https://codepen.io/philipwalton/pen/MYbrrr
+     * CodePen with min-width: https://codepen.io/anon/pen/VrKGWa
+     */
+  min-height: 0;
+  min-width: 0;
+  border: none;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.tree-picker-container .tree-picker-combo .tree-picker-content .tree-picker-input:focus {
+  outline: none;
+}
+
+.tree-picker-container .tree-picker-combo .tree-picker-content .tree-picker-input::-ms-clear {
+  display: none;
+}
+
+.tree-picker-container .tree-picker-combo .tree-picker-dropdown-button-container {
+  -webkit-box-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.tree-picker-container .tree-picker-combo .tree-picker-dropdown-button-container .tree-picker-dropdown-button {
+  padding: 0px;
+}
+
+.tree-picker-container .tree-picker-combo .tree-picker-dropdown-button-container .tree-picker-dropdown-button:hover {
+  background-color: rgba( 218, 218, 218 ,  1 );
+  background-color: rgba( var(--palette-neutral-10,218, 218, 218) ,  1 );
+}
+
+.tree-picker-container .tree-picker-error {
+  display: -webkit-box;
+  -webkit-flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 5px;
+  align-items: center;
+  font-size: 12px;
+  color: rgba( 168, 0, 0 ,  1 );
+  color: rgba( var(--palette-accent1-dark,168, 0, 0) ,  1 );
+}
+
+.tree-picker-container .tree-picker-error i {
+  margin-right: 5px;
+}
+
+.tree-picker-dropdown {
+  animation-duration: 0.1s !important;
+}
+
+.tree-picker-dropdown .dropdown-section-divider:after {
+  position: relative;
+  left: 0;
+  top: 50%;
+  height: 1px;
+  background: rgba( 218, 218, 218 ,  1 );
+  background: rgba( var(--palette-neutral-10,218, 218, 218) ,  1 );
+  content: "";
+  width: 100%;
+  display: block;
+}
+
+.tree-picker-dropdown .scroll-tree-overflow-box {
+  overflow-x: hidden;
+}
+
+.tree-picker-dropdown .tree-list-item {
+  height: 34px;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.tree-picker-dropdown .tree-list-item:not(.disabled):hover {
+  background-color: rgba( 239, 246, 252 ,  1 );
+  background-color: rgba( var(--palette-primary-tint-40,239, 246, 252) ,  1 );
+}
+
+.tree-picker-dropdown .tree-list-item.disabled .tree-list-item-select {
+  cursor: default;
+}
+
+.tree-picker-dropdown .tree-list-item.selected {
+  background-color: rgba( 234, 234, 234 ,  1 );
+  background-color: rgba( var(--palette-neutral-8,234, 234, 234) ,  1 );
+  border: 1px dashed transparent;
+}
+
+.tree-picker-dropdown .tree-list-item.tree-list-group-header {
+  font-size: 12px;
+}
+
+.tree-picker-dropdown .tree-list-item.tree-list-group-header .tree-list-expand {
+  display: none;
+}
+
+.tree-picker-dropdown .tree-list-item.tree-list-group-header .tree-list-item-select {
+  text-align: left;
+  color: rgba(0, 90, 158, 1);
+  color: var(--communication-foreground,rgba(0, 90, 158, 1));
+  border: none;
+}
+
+.tree-picker-dropdown .tree-list-item.tree-list-group-divider {
+  height: 6px;
+}
+
+.tree-picker-dropdown .tree-list-item.tree-list-group-divider:after {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 1px;
+  background: rgba( 218, 218, 218 ,  1 );
+  background: rgba( var(--palette-neutral-10,218, 218, 218) ,  1 );
+  content: "";
+  width: 100%;
+  display: block;
+}
+
+.tree-picker-dropdown .tree-list-item.tree-list-group-divider .tree-list-item-select {
+  border: none;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA y AR - Reconocimiento de Objetos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        #ar-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #output {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #selectedImage {
+            max-width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="ar-container">
+        <input type="file" id="imageInput" accept="image/*">
+        <img id="selectedImage">
+        <div id="output"></div>
+        <a-scene embedded arjs="sourceType: webcam; detectionMode: mono_and_matrix;">
+            <!-- No se requiere configuración adicional para AR.js -->
+        </a-scene>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
+
+    <script>
+        document.getElementById('imageInput').addEventListener('change', handleImage);
+
+        async function handleImage(event) {
+            const file = event.target.files[0];
+
+            if (file) {
+                const imageURL = URL.createObjectURL(file);
+                document.getElementById('selectedImage').src = imageURL;
+
+                // Realizar la detección de objetos
+                await detectObjects(imageURL);
+            }
+        }
+
+        async function detectObjects(imageURL) {
+            const model = await cocoSsd.load();
+
+            // Cargar la imagen
+            const imgElement = document.getElementById('selectedImage');
+            const predictions = await model.detect(imgElement);
+
+            // Mostrar las predicciones en el área de salida
+            displayPredictions(predictions);
+        }
+
+        function displayPredictions(predictions) {
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '';
+
+            predictions.forEach(prediction => {
+                const { class: label, score, bbox } = prediction;
+                const [x, y, width, height] = bbox;
+
+                const result = document.createElement('div');
+                result.className = 'result';
+                result.innerHTML = `<strong>${label}</strong> (${(score * 100).toFixed(2)}% confidence)`;
+
+                // Dibujar un cuadro alrededor del objeto en la imagen
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                canvas.width = imgElement.width;
+                canvas.height = imgElement.height;
+                ctx.strokeStyle = 'red';
+                ctx.lineWidth = 2;
+                ctx.strokeRect(x, y, width, height);
+
+                result.appendChild(canvas);
+                outputDiv.appendChild(result);
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+body {
+    background-image: url('TTT.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.form-main {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+}
+.form-content {
+    position: relative;
+}
+.circle-1, .circle-2, .circle-3 {
+    position: absolute;
+    background: #3498db; /* Cambia el color si lo deseas */
+    border-radius: 50%;
+}
+.circle-1 {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: -50px;
+}
+.circle-2 {
+    width: 80px;
+    height: 80px;
+    top: -30px;
+    right: -30px;
+}
+.circle-3 {
+    width: 60px;
+    height: 60px;
+    bottom: -30px;
+    left: -30px;
+}
+.box {
+    padding: 20px;
+}
+h3 {
+    font-size: 24px;
+}
+.input-box {
+    margin: 20px 0;
+}
+.input-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.input-link {
+    text-align: right;
+}
+.btn {
+    background: #3498db; /* Cambia el color si lo deseas */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+p, a {
+    margin: 10px 0;
+}

@@ -1,0 +1,18 @@
+.zero-data-action {
+  padding: 10px;
+  background-color: rgba( 244, 244, 244 ,  1 );
+  background-color: rgba( var(--palette-neutral-4,244, 244, 244) ,  1 );
+  display: flex;
+  align-items: center;
+}
+
+.zero-data-action.github {
+  margin-bottom: 10px;
+}
+
+.zero-data-action .zero-data-icon {
+  font-size: 30px;
+  width: 30px;
+  margin-right: 10px;
+  vertical-align: middle;
+}

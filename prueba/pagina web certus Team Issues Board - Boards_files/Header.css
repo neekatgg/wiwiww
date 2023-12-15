@@ -1,0 +1,226 @@
+.work-item-responsive-viewport {
+  display: flex;
+}
+
+.work-item-responsive-header {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative;
+  min-height: 61px;
+}
+
+.work-item-responsive-header .work-item-responsive-header-left {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 60%;
+  padding-bottom: 3px;
+}
+
+.work-item-responsive-header .work-item-responsive-header-right {
+  flex: 0 0 auto;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.work-item-responsive-header .work-item-responsive-freshness {
+  flex: 0 0 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.work-item-responsive-header .work-item-responsive-freshness .full {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.work-item-responsive-header .work-item-responsive-header-tabs {
+  flex: 1 1 auto;
+}
+
+.work-item-responsive-header .work-item-header-page {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-content: stretch;
+  flex-wrap: nowrap;
+  padding-right: 10px;
+}
+
+.work-item-responsive-header .work-item-header-page .work-item-header-section {
+  padding-left: 10px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  flex: 8 1 auto;
+  overflow: hidden;
+}
+
+.work-item-responsive-header .work-item-header-page .work-item-header-section:first-child {
+  flex: 1 1 auto;
+}
+
+.work-item-responsive-header .work-item-header-page .work-item-header-section .work-item-header-group {
+  display: flex;
+  flex-direction: column;
+  display: table;
+  width: 100%;
+}
+
+.work-item-responsive-header .work-item-header-page .work-item-header-section .work-item-header-group .work-item-header-control-container {
+  display: table-row;
+  flex-direction: row;
+}
+
+.work-item-responsive-header .work-item-header-page .work-item-header-section .work-item-header-group .work-item-header-control-container .workitemlabel, .work-item-responsive-header .work-item-header-page .work-item-header-section .work-item-header-group .work-item-header-control-container .workitemcontrol {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.work-item-responsive-header .work-item-header-page .work-item-header-section .work-item-header-group .work-item-header-control-container .workitemlabel {
+  min-width: 70px;
+  max-width: 200px;
+  flex: 1 1 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  width: 1px;
+}
+
+.work-item-responsive-header .work-item-header-page .work-item-header-section .work-item-header-group .work-item-header-control-container .workitemcontrol {
+  flex: 2 3 0;
+  min-width: 70px;
+}
+
+.large .work-item-responsive-header .work-item-responsive-header-right {
+  margin-left: auto;
+}
+
+.large .work-item-responsive-header .work-item-responsive-freshness.minimal {
+  display: none;
+}
+
+.large .work-item-responsive-header .work-item-responsive-freshness.full {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.medium .work-item-responsive-header, .small .work-item-responsive-header {
+  flex-direction: column;
+}
+
+.medium .work-item-responsive-header .work-item-responsive-header-right, .small .work-item-responsive-header .work-item-responsive-header-right {
+  display: block;
+}
+
+.medium .work-item-responsive-header .work-item-responsive-freshness.full, .small .work-item-responsive-header .work-item-responsive-freshness.full {
+  display: none;
+}
+
+.small .work-item-responsive-header .work-item-responsive-freshness {
+  display: none;
+}
+
+.work-item-responsive-header {
+  padding-left: 8px;
+}
+
+.work-item-responsive-header .workitemlabel {
+  vertical-align: middle;
+  line-height: calc(2em + 3px);
+}
+
+.work-item-responsive-header .workitemcontrol.new-classification-control {
+  position: relative;
+}
+
+.work-item-responsive-header .workitemcontrol.new-classification-control .workitem-classification-picker.tree-picker-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.work-item-responsive-header .workitemcontrol .combo {
+  background: rgba( 248, 248, 248 ,  1 );
+  background: rgba( var(--palette-neutral-2,248, 248, 248) ,  1 );
+}
+
+.work-item-responsive-header .workitemcontrol .combo input {
+  background-color: rgba( 248, 248, 248 ,  1 );
+  background-color: rgba( var(--palette-neutral-2,248, 248, 248) ,  1 );
+}
+
+.work-item-responsive-header .workitemcontrol .combo:not(.readonly).invalid, .work-item-responsive-header .workitemcontrol .combo:not(.readonly).focus, .work-item-responsive-header .workitemcontrol .combo:not(.readonly):focus, .work-item-responsive-header .workitemcontrol .combo:not(.readonly):hover,
+.work-item-responsive-header .workitemcontrol .combo:not(.readonly):hover input,
+.work-item-responsive-header .workitemcontrol .combo:not(.readonly) input:focus {
+  background-color: rgba( 255, 255, 255 ,  1 );
+  background-color: rgba( var(--palette-neutral-0,255, 255, 255) ,  1 );
+}
+
+.work-item-responsive-header .workitemcontrol .read-only-field-icon + .combo.readonly {
+  margin-left: 15px;
+  width: auto;
+}
+
+.work-item-responsive-header .work-item-responsive-freshness {
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 2em;
+}
+
+.work-item-responsive-header .work-item-responsive-freshness .workitemlabel {
+  display: none;
+}
+
+.work-item-responsive-header .work-item-responsive-freshness .workitemcontrol > div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.work-item-responsive-header .work-item-responsive-freshness.full {
+  max-width: calc(100% - 600px);
+}
+
+.work-item-responsive-header .work-item-responsive-header-tabs {
+  margin-bottom: -1px;
+}
+
+.work-item-responsive-header .work-item-responsive-header-tabs .work-item-form-tab {
+  margin: 0;
+}
+
+.work-item-responsive-header .work-item-responsive-header-tabs .work-item-form-tabs > ul {
+  border-left-width: 1px;
+}
+
+.work-item-responsive-header .state-coloring-enabled .combo {
+  margin-left: 15px;
+  width: auto;
+}
+
+.work-item-responsive-header .state-coloring-enabled .state-circle {
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  width: 11px;
+  height: 11px;
+  margin-top: 7px;
+  float: left;
+  position: relative;
+}

@@ -1,0 +1,20 @@
+.add-links-container {
+  height: 25px;
+}
+
+.maximized-grid-group .links-control {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.maximized-grid-group .la-grid {
+  position: absolute;
+  top: 25px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto !important;
+}

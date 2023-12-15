@@ -1,0 +1,80 @@
+.tree-list-item {
+  display: -webkit-box;
+  -webkit-flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 0px 12px;
+  cursor: pointer;
+}
+
+.tree-list-item .tree-list-expand {
+  -webkit-box-flex: 0 0 16px;
+  -webkit-flex: 0 0 16px;
+  flex: 0 0 16px;
+  margin-right: 6px !important;
+  height: 100% !important;
+  transition: transform linear .2s;
+}
+
+.tree-list-item .tree-list-expand, .tree-list-item .tree-list-expand:active, .tree-list-item .tree-list-expand:hover, .tree-list-item .tree-list-expand:focus {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: auto;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-align: initial;
+  border-radius: 0;
+}
+
+.tree-list-item .tree-list-expand.tree-list-expand--collapsed {
+  transform: rotateZ(-90deg);
+}
+
+.tree-list-item .tree-list-expand.tree-list-expand--hidden {
+  visibility: hidden;
+  border: none;
+}
+
+.tree-list-item .tree-list-expand i {
+  font-size: 10px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.tree-list-item .tree-list-item-select {
+  height: 100% !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  -webkit-box-flex: 1 1 0%;
+  -webkit-flex: 1 1 0%;
+  flex: 1 1 0%;
+  /* Chrome fix - Chrome incorrectly sets a min-height/width it will not go lower than
+     * See: https://github.com/philipwalton/flexbugs#1-minimum-content-sizing-of-flex-items-not-honored
+     * CodePen with bug: https://codepen.io/philipwalton/pen/MYbrrr
+     * CodePen with min-width: https://codepen.io/anon/pen/VrKGWa
+     */
+  min-height: 0;
+  min-width: 0;
+}
+
+.tree-list-item .tree-list-item-select, .tree-list-item .tree-list-item-select:active, .tree-list-item .tree-list-item-select:hover, .tree-list-item .tree-list-item-select:focus {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: auto;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-align: initial;
+  border-radius: 0;
+}

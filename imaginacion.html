@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+    <link rel="shortcut icon" href="rrr.png" type="image/x-icon">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras de Productos para el Hogar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(5, 5, 5);
+        }
+
+        header {
+            background-image: url('productos1.avif'); /* Reemplaza 'tu_imagen_de_fondo.jpg' con la ruta de tu imagen */
+            background-size: cover;
+            background-position: center;
+            color: rgb(247, 247, 241);
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .producto {
+            border: 1px solid purple;
+            margin: 10px;
+            padding: 20px;
+            background-color: beige plum;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .producto h2 {
+            color: beige;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .producto img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            /* Tamaño fijo para las imágenes */
+            width: 150px;
+            height: 150px;
+            /* Agregar animación */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .producto p {
+            color: #f3ebeb;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        button.producto {
+            background-color: blueviolet;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .producto button:hover {
+            background-color: blueviolet;
+        }
+
+        .carrito {
+            background-color: blueviolet;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .carrito:hover {
+            background-color: black;
+        }
+
+        .producto img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Productos para el Hogar</h1>
+    </header>
+
+    <section>
+        <!-- Fila 1 -->
+        <div class="producto" id="producto1">
+            <img src="semana 3_1.webp" alt="Producto 1">
+            <h2>Producto 1</h2>
+            <p>🐱‍👓Características: silla craft.</p>
+            <p>🐱‍👓Altura a la comidad del cliente</p>
+            <p>🐱‍👓Diseño extravagante</p>
+            <p>🐱‍👓Hecho de material de alo valor</p>
+            <p>🐱‍👓Precio: $50.00</p>
+            <button onclick="agregarAlCarrito('Producto 1', 50.00)">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" id="producto2">
+            <img src="semana 3_2.webp" alt="Producto 2">
+            <h2>Producto 2</h2>
+            <p>🐱‍👓Características: mesa refinada.</p>
+            <p>🐱‍👓Altura a la comidad del cliente</p>
+            <p>🐱‍👓Diseño extravagante</p>
+            <p>🐱‍👓Hecho de material de alo valor</p>
+            <p>🐱‍👓Precio: $300.00</p>
+            <button onclick="agregarAlCarrito('Producto 2', 75.00)">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" id="producto3">
+            <img src="semana 3_3.webp" alt="Producto 3">
+            <h2>Producto 3</h2>
+            <p>🐱‍👓Características: comoda gk.</p>
+            <p>🐱‍👓Altura a la comidad del cliente</p>
+            <p>🐱‍👓Diseño extravagante</p>
+            <p>🐱‍👓Hecho de material de alo valor</p>
+            <p>🐱‍👓Precio: $200.00</p>
+            <button onclick="agregarAlCarrito('Producto 3', 100.00)">Agregar al Carrito</button>
+        </div>
+        <!-- Fin Fila 1 -->
+
+        <!-- Fila 2 -->
+        <div class="producto" id="producto4">
+            <img src="semana 3_4.webp" alt="Producto 4">
+            <h2>Producto 4</h2>
+            <p>🐱‍👓Características: cama vent.</p>
+            <p>🐱‍👓Altura a la comidad del cliente</p>
+            <p>🐱‍👓Diseño extravagante</p>
+            <p>🐱‍👓Hecho de material de alo valor</p>
+            <p>🐱‍👓Precio: $150.00</p>
+            <button onclick="agregarAlCarrito('Producto 4', 60.00)">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" id="producto5">
+            <img src="semana 3_5.webp" alt="Producto 5">
+            <h2>Producto 5</h2>
+            <p>🐱‍👓Características: refrigeradora bob.</p>
+            <p>🐱‍👓Altura a la comidad del cliente</p>
+            <p>🐱‍👓Diseño extravagante</p>
+            <p>🐱‍👓Hecho de material de alo valor</p>
+            <p>🐱‍👓Precio: $1000.00</p>
+            <button onclick="agregarAlCarrito('Producto 5', 80.00)">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" id="producto6">
+            <img src="semana 3_6.webp" alt="Producto 6">
+            <h2>Producto 6</h2>
+            <p>🐱‍👓Características: baño y cortina otoño.</p>
+            <p>🐱‍👓Altura a la comidad del cliente</p>
+            <p>🐱‍👓Diseño extravagante</p>
+            <p>🐱‍👓Hecho de material de alo valor</p>
+            <p>🐱‍👓Precio: $400.00</p>
+            <button onclick="agregarAlCarrito('Producto 6', 120.00)">Agregar al Carrito</button>
+        </div>
+        <!-- Fin Fila 2 -->
+
+        <!-- Fila 3 -->
+        <div class="producto" id="producto7">
+            <img src="semana 3_7.webp" alt="Producto 7">
+            <h2>Producto 7</h2>
+            <p>🐱‍👓Características: closet rp.</p>
+            <p>🐱‍👓Altura a la comidad del cliente</p>
+            <p>🐱‍👓Diseño extravagante</p>
+            <p>🐱‍👓Hecho de material de alo valor</p>
+            <p>🐱‍👓Precio: $300.00</p>
+            <button onclick="agregarAlCarrito('Producto 7', 90.00)">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" id="producto8">
+            <img src="semana 3_8.webp" alt="Producto 8">
+            <h2>Producto 8</h2>
+            <p>🐱‍👓Características: sillones groot.</p>
+            <p>🐱‍👓Altura a la comidad del cliente</p>
+            <p>🐱‍👓Diseño extravagante</p>
+            <p>🐱‍👓Hecho de material de alo valor</p>
+            <p>🐱‍👓Precio: $50.00</p>
+            <button onclick="agregarAlCarrito('Producto 8', 110.00)">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto" id="producto9">
+            <img src="semana 3_9.webp" alt="Producto 9">
+            <h2>Producto 9</h2>
+            <p>🐱‍👓Características: focos elege.</p>
+            <p>🐱‍👓Altura a la comidad del cliente</p>
+            <p>🐱‍👓Diseño extravagante</p>
+            <p>🐱‍👓Hecho de material de alo valor</p>
+            <p>🐱‍👓Precio: $500.00</p>
+            <button onclick="agregarAlCarrito('Producto 9', 150.00)">Agregar al Car</button>
+        </div>
+
+        <!-- Continúa añadiendo más productos... -->
+
+    </section>
+
+    <div class="carrito" onclick="verCarrito()">Ver Carrito</div>
+
+    <script>
+         // Función para agregar productos al carrito (simulada)
+         function agregarAlCarrito(nombreProducto, precio) {
+            // Aquí puedes implementar la lógica para agregar productos al carrito
+            alert(`¡${nombreProducto} agregado al carrito! Precio: $${precio}`);
+        }
+
+        // Función para mostrar el carrito (simulada)
+        function verCarrito() {
+            // Aquí puedes implementar la lógica para mostrar el contenido del carrito
+            alert('Mostrar carrito');
+        }
+    </script>
+
+</body>
+</html>
